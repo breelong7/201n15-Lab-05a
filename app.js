@@ -56,7 +56,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   var addOne = sum(a, b)[0];
   var addTwo = sum(addOne, c)[0];
-  console.log('sum of a b c', addTwo);
+  // console.log('sum of a b c', addTwo);
   var multiOne = multiply(a, b)[0];
   var multiTwo = multiply(multiOne, c)[0];
   var sumString = `${a} and ${b} and ${c} sum to ${addTwo}.`;
@@ -67,7 +67,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 sumAndMultiply(4, 7, 5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+// testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -85,12 +85,16 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  var firstSum = sum(testArray[0], testArray[1])[0];
+  var secondSum = sum(firstSum, testArray[2])[0];
+  console.log('the sum of 2 3 4 is', secondSum);
+  var string = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${secondSum} is their sum.`;
+  return [secondSum, string];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
